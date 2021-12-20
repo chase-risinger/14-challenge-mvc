@@ -1,27 +1,27 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // create our Post model
-class Post extends Model {
+class Blog extends Model {
   static upvote(body, models) {
     return models.Vote.create({
       user_id: body.user_id,
-      post_id: body.post_id
+      blog_id: body.blog_id
     }).then(() => {
       return Post.findOne({
         where: {
-          id: body.post_id
+          id: body.blog_id
         },
         attributes: [
           'id',
-          'post_url',
           'title',
+          'blog_content',
           'created_at',
-          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.blog_id)'), 'vote_count']
         ],
         include: [
           {
             model: models.Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: ['id', 'comment_text', 'blog_id', 'user_id', 'created_at'],
             include: {
               model: models.User,
               attributes: ['username']
@@ -34,7 +34,7 @@ class Post extends Model {
 }
 
 // create fields/columns for Post model
-Post.init(
+Blog.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -46,13 +46,12 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    post_url: {
+    blog_content: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isURL: true
-      }
+      allowNull: false
     },
+
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -65,8 +64,9 @@ Post.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post'
+    modelName: 'blog'
   }
 );
 
-module.exports = Post;
+module.exports = Blog
+  ;

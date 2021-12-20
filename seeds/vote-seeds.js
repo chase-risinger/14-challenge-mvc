@@ -3,191 +3,191 @@ const { Vote } = require('../models');
 const votedata = [
   {
     user_id: 9,
-    post_id: 19
+    blog_id: 9
   },
   {
     user_id: 1,
-    post_id: 8
+    blog_id: 8
   },
   {
     user_id: 8,
-    post_id: 12
+    blog_id: 2
   },
   {
     user_id: 8,
-    post_id: 19
+    blog_id: 9
   },
   {
     user_id: 9,
-    post_id: 3
+    blog_id: 3
   },
   {
     user_id: 3,
-    post_id: 16
+    blog_id: 6
   },
   {
     user_id: 4,
-    post_id: 7
+    blog_id: 7
   },
   {
     user_id: 10,
-    post_id: 7
+    blog_id: 7
   },
   {
     user_id: 3,
-    post_id: 18
+    blog_id: 8
   },
   {
     user_id: 9,
-    post_id: 16
+    blog_id: 6
   },
   {
     user_id: 3,
-    post_id: 17
+    blog_id: 7
   },
   {
     user_id: 10,
-    post_id: 2
+    blog_id: 2
   },
   {
     user_id: 6,
-    post_id: 10
+    blog_id: 1
   },
   {
     user_id: 5,
-    post_id: 11
+    blog_id: 1
   },
   {
     user_id: 6,
-    post_id: 1
+    blog_id: 1
   },
   {
     user_id: 9,
-    post_id: 18
+    blog_id: 8
   },
   {
     user_id: 6,
-    post_id: 15
+    blog_id: 5
   },
   {
     user_id: 6,
-    post_id: 7
+    blog_id: 7
   },
   {
     user_id: 6,
-    post_id: 4
+    blog_id: 4
   },
   {
     user_id: 1,
-    post_id: 16
+    blog_id: 6
   },
   {
     user_id: 10,
-    post_id: 18
+    blog_id: 8
   },
   {
     user_id: 4,
-    post_id: 10
+    blog_id: 1
   },
   {
     user_id: 10,
-    post_id: 5
+    blog_id: 5
   },
   {
     user_id: 5,
-    post_id: 16
+    blog_id: 6
   },
   {
     user_id: 6,
-    post_id: 17
+    blog_id: 7
   },
   {
     user_id: 1,
-    post_id: 15
+    blog_id: 5
   },
   {
     user_id: 7,
-    post_id: 13
+    blog_id: 3
   },
   {
     user_id: 6,
-    post_id: 3
+    blog_id: 3
   },
   {
     user_id: 6,
-    post_id: 13
+    blog_id: 3
   },
   {
     user_id: 7,
-    post_id: 1
+    blog_id: 1
   },
   {
     user_id: 4,
-    post_id: 15
+    blog_id: 5
   },
   {
     user_id: 2,
-    post_id: 18
+    blog_id: 8
   },
   {
     user_id: 9,
-    post_id: 10
+    blog_id: 0
   },
   {
     user_id: 10,
-    post_id: 15
+    blog_id: 5
   },
   {
     user_id: 8,
-    post_id: 1
+    blog_id: 1
   },
   {
     user_id: 10,
-    post_id: 8
+    blog_id: 8
   },
   {
     user_id: 2,
-    post_id: 13
+    blog_id: 3
   },
   {
     user_id: 9,
-    post_id: 20
+    blog_id: 2
   },
   {
     user_id: 1,
-    post_id: 17
+    blog_id: 7
   },
   {
     user_id: 10,
-    post_id: 9
+    blog_id: 9
   },
   {
     user_id: 10,
-    post_id: 3
+    blog_id: 3
   },
   {
     user_id: 5,
-    post_id: 6
+    blog_id: 6
   },
   {
     user_id: 6,
-    post_id: 12
+    blog_id: 2
   },
   {
     user_id: 5,
-    post_id: 2
+    blog_id: 2
   },
   {
     user_id: 6,
-    post_id: 14
+    blog_id: 4
   },
   {
     user_id: 8,
-    post_id: 18
+    blog_id: 8
   },
   {
     user_id: 3,
-    post_id: 4
+    blog_id: 4
   }
 ];
 
