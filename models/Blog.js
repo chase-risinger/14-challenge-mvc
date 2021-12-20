@@ -1,13 +1,13 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// create our Post model
+// create our Blog model
 class Blog extends Model {
   static upvote(body, models) {
     return models.Vote.create({
       user_id: body.user_id,
       blog_id: body.blog_id
     }).then(() => {
-      return Post.findOne({
+      return Blog.findOne({
         where: {
           id: body.blog_id
         },
@@ -16,7 +16,7 @@ class Blog extends Model {
           'title',
           'blog_content',
           'created_at',
-          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.blog_id)'), 'vote_count']
+          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE blog.id = vote.blog_id)'), 'vote_count']
         ],
         include: [
           {
@@ -33,7 +33,7 @@ class Blog extends Model {
   }
 }
 
-// create fields/columns for Post model
+// create fields/columns for Blog model
 Blog.init(
   {
     id: {
@@ -48,7 +48,10 @@ Blog.init(
     },
     blog_content: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
 
 

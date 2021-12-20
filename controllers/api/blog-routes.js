@@ -102,7 +102,8 @@ router.put('/upvote', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Blog.update(
     {
-      title: req.body.title
+      title: req.body.title,
+      blog_content: req.body.blog_content
     },
     {
       where: {

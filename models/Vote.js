@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Vote extends Model {}
+class Vote extends Model { }
 
 Vote.init(
   {
@@ -17,10 +17,10 @@ Vote.init(
         key: 'id'
       }
     },
-    post_id: {
+    blog_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'post',
+        model: 'blog',
         key: 'id'
       }
     }
